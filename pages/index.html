@@ -22,13 +22,16 @@
             font-size: 14px;
             line-height: 1.5;
         }
+        h1,h2,h3,h4,h5 {
+            margin: 5px 0;
+        }
         @media screen and (max-width:1200px){
             .banner,.footer{
                 width:1200px;
             }
         }
         .more{
-            margin-top: 20px;
+            margin-top:20px;
         }
         button{
             width:150px;
@@ -68,13 +71,36 @@
             font-weight: 600;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            margin: 5px 0;
-        }
+        .banner{
+		position: relative;
+	}
+	.banner ul{
+		list-style: none;
+		padding:0px;
+        margin:0px;
+	}
+	.banner ul li img{
+		width:100%;
+	}
+	.banner .disActive{
+		display: none;
+	}
+	.banner .pagination{
+		position: absolute;
+		bottom: 20px;
+		width:200px;
+		left: 50%;
+		margin-left: -100px;
+		display: flex;
+	}
+	.banner .pagination .pagination-line{
+		width:50px;
+		height: 5px;
+		background-color: #c9c3c5;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+
         .about .content {
             display: flex;
         }
@@ -91,7 +117,26 @@
             text-indent: 2em;
             font-size: 16px;
         }
-
+        
+        .service{
+            position: relative;
+        }
+        .service .change{
+            position: absolute;
+            right:-20px;
+            top:50%;
+        }
+        .service .change .right,.service .change .left{
+            width:40px;
+            height: 40px;
+            font-size: 23px;
+            background-color: #b2b2b2;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 40px;
+            color:#fff;
+            cursor:pointer;
+        }
         .service .content {
             display: flex;
         }
@@ -99,6 +144,10 @@
         .service .content .item {
             width: 256px;
             flex: 1;
+        }
+
+        .service .content .item>div:first-child{
+            margin-bottom: 10px;
         }
 
         .service .content .item .introduce {
@@ -118,17 +167,45 @@
         .team .content .bg {
             position: absolute;
             top: 100px;
-            z-index: -1;
+            z-index: -3;
             background-color: #cce0f6;
             height: 250px;
             width: 1200px;
         }
 
         .team .content .person-introduce {
+            position: relative;
             flex: 1;
             text-align: center;
+            cursor: pointer;
         }
-
+        .team .content .person-introduce:hover .person-info{
+            display:none;
+        }
+        .team .content .person-introduce:hover .details{
+            display: block;
+            position: absolute;
+            top:100px;
+            left: 20px;
+            width:260px;
+            height: 305px;
+            padding:150px 20px 20px 20px;
+            box-sizing: border-box;
+            z-index:-1;
+            background:url('../images/detail-bg.jpg')center no-repeat;
+            text-align: left;
+        }
+        .team .content .person-introduce .details{
+            display: none;
+        }
+        .team .content .details div:nth-child(1){
+            font-size: 18px;
+            font-weight:500;
+        }
+        .team .content .details div:nth-child(2){
+            font-size: 15px;
+            font-weight:500;
+        }
         .team .content .outside {
             border: 2px solid #004995;
             border-radius: 50%;
@@ -146,9 +223,8 @@
         }
 
         .team .content .inside img {
-            border-radius: 50%
+            border-radius: 50%;
         }
-
         .team .content .person-info div:nth-child(1) {
             font-size: 24px;
             font-weight: 500;
@@ -253,9 +329,22 @@
         </div>
         <!-- 轮播图 -->
         <div class="banner">
-            <img src="../images/banner1.jpg" width="100%">
+            <ul>
+                <li class="disActive" style="display: block"><img src="../images/banner1.jpg"></li>
+                <li class="disActive"><img src="../images/banner1.jpg"></li>
+                <li class="disActive"><img src="../images/banner1.jpg"></li>
+            </ul>
+            <div class="pagination">
+                <div id="0" class="pagination-line" style="background-color: #fff">
+                </div>
+                <div id="1" class="pagination-line">
+                </div>
+                <div id="2" class="pagination-line">
+                </div>
+            </div>
         </div>
-        <div class="main size" <!-- 关于安孚 -->
+        <!-- 关于安孚 -->
+        <div class="main size">
             <div class="about">
                 <div class="title">
                     <h2>关于安孚</h2>
@@ -276,7 +365,7 @@
                         <p>
                             安孚律师事务所将会在您所涉及的每一个领域，根据您的需要，理性地为您提供诚信、卓越的法律服务。
                         </p>
-                        <div class="more">
+                        <div class="more" style="margin-top:50px">
                             <button type="button">了解更多</button>
                         </div>
                     </div>
@@ -285,200 +374,253 @@
 
             <!-- 服务领域 -->
             <div class="service">
-                <div class="title" style="text-align:center">
-                    <h2>服务领域</h2>
-                    <div>ANF<span class="line">U SER</span>VICE</div>
-                </div>
-                <div class="content">
-                    <div class="item">
-                        <div class="img">
-                            <img src="../images/book.jpg" alt="">
+                <div class="change">
+                    <div class="left">></div>
+                    <div class="right">
+                        <</div> </div> <div class="title" style="text-align:center">
+                            <h2>服务领域</h2>
+                            <div>ANF<span class="line">U SER</span>VICE</div>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <div class="img">
+                                <img src="../images/book.jpg" alt="">
+                            </div>
+                            <div class="introduce">
+                                <h3>知识产权</h3>
+                                <div>文化创意产业及高科技领域的法律服务、知识产权纠纷、商标权侵权诉讼...</div>
+                            </div>
                         </div>
-                        <div class="introduce">
-                            <h3>知识产权</h3>
-                            <div>文化创意产业及高科技领域的法律服务、知识产权纠纷、商标权侵权诉讼...</div>
+                        <div class="item">
+                            <div class="introduce">
+                                <h3>房产建筑</h3>
+                                <div>提供交通、能源、水利、城市基础建设等建设工程项目的立项、招投标、设计...</div>
+                            </div>
+                            <div class="img">
+                                <img src="../images/hourse.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <img src="../images/person1.jpg" alt="">
+                            </div>
+                            <div class="introduce">
+                                <h3>公司顾问服务</h3>
+                                <div>为公司设立、股权变更、融资、上市等全流程提供专业的法律顾问服务 ...</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="introduce">
+                                <h3>婚姻继承</h3>
+                                <div>1.父母赡养问题；2.子女抚养问题；
+                                    3.夫妻财产问题；4.同居财产问题...</div>
+                            </div>
+                            <div class="img">
+                                <img src="../images/person2.jpg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="introduce">
-                            <h3>房产建筑</h3>
-                            <div>提供交通、能源、水利、城市基础建设等建设工程项目的立项、招投标、设计...</div>
-                        </div>
-                        <div class="img">
-                            <img src="../images/hourse.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="../images/person1.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>公司顾问服务</h3>
-                            <div>为公司设立、股权变更、融资、上市等全流程提供专业的法律顾问服务 ...</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="introduce">
-                            <h3>婚姻继承</h3>
-                            <div>1.父母赡养问题；2.子女抚养问题；
-                                3.夫妻财产问题；4.同居财产问题...</div>
-                        </div>
-                        <div class="img">
-                            <img src="../images/person2.jpg" alt="">
-                        </div>
+                    <div class="more" style="text-align:center">
+                        <button type="button">了解更多</button>
                     </div>
                 </div>
-                <div class="more" style="text-align:center">
-                    <button type="button">了解更多</button>
-                </div>
-            </div>
-            <!-- 安孚团队 -->
-            <div class="team">
-                <div class="title" style="text-align:right">
-                    <h2>安孚团队</h2>
-                    <div>LAWYER <span class="line">TEAM</span></div>
-                </div>
-                <div class="content">
-                    <div class="bg"></div>
-                    <div class="person-introduce">
-                        <div class="outside">
-                            <div class="inside">
+                <!-- 安孚团队 -->
+                <div class="team">
+                    <div class="title" style="text-align:right">
+                        <h2>安孚团队</h2>
+                        <div>LAWYER <span class="line">TEAM</span></div>
+                    </div>
+                    <div class="content">
+                        <div class="bg"></div>
+                        <div class="person-introduce">
+                            <div class="outside">
+                                <div class="inside">
 
+                                </div>
+                            </div>
+                            <div class="person-info">
+                                <div>祝友良</div>
+                                <div>律所主任</div>
+                                <div>MORE</div>
+                            </div>
+                            <div class="details">
+                                <div>个人简历</div>
+                                <div>祝友良律师从事律师职业已二十三年，更专注于刑事辩护。通过专业辩护...</div>
+                                <div class="right-bottom"></div>
                             </div>
                         </div>
-                        <div class="person-info">
-                            <div>祝友良</div>
-                            <div>律所主任</div>
-                            <div>MORE</div>
+                        <div class="person-introduce">
+                            <div class="outside">
+                                <div class="inside">
+                                    <img src="../images/avatar2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="person-info">
+                                <div>赵向前</div>
+                                <div>合伙人律师</div>
+                                <div>MORE</div>
+                            </div>
+                            <div class="details">
+                                <div>个人简历</div>
+                                <div>赵向前律师从事律师职业已二十三年，更专注于刑事辩护。通过专业辩护...</div>
+                                <div class="right-bottom"></div>
+                            </div>
+                        </div>
+                        <div class="person-introduce">
+                            <div class="outside">
+                                <div class="inside">
+                                    <img src="../images/avatar3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="person-info">
+                                <div>陆燕</div>
+                                <div>合伙律师人</div>
+                                <div>MORE</div>
+                            </div>
+                            <div class="details">
+                                <div>个人简历</div>
+                                <div>陆燕律师从事律师职业已二十三年，更专注于刑事辩护。通过专业辩护...</div>
+                                <div class="right-bottom"></div>
+                            </div>
+                        </div>
+                        <div class="person-introduce">
+                            <div class="outside">
+                                <div class="inside">
+                                    <img src="../images/avatar4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="person-info">
+                                <div>王丽君</div>
+                                <div>律所</div>
+                                <div>MORE</div>
+                            </div>
+                            <div class="details">
+                                <div>个人简历</div>
+                                <div>王丽君律师从事律师职业已二十三年，更专注于刑事辩护。通过专业辩护...</div>
+                                <div class="right-bottom"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="person-introduce">
-                        <div class="outside">
-                            <div class="inside">
-                                <img src="../images/avatar2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="person-info">
-                            <div>赵向前</div>
-                            <div>合伙人律师</div>
-                            <div>MORE</div>
-                        </div>
-                    </div>
-                    <div class="person-introduce">
-                        <div class="outside">
-                            <div class="inside">
-                                <img src="../images/avatar3.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="person-info">
-                            <div>陆燕</div>
-                            <div>合伙律师人</div>
-                            <div>MORE</div>
-                        </div>
-                    </div>
-                    <div class="person-introduce">
-                        <div class="outside">
-                            <div class="inside">
-                                <img src="../images/avatar4.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="person-info">
-                            <div>王丽君</div>
-                            <div>律所</div>
-                            <div>MORE</div>
-                        </div>
+                    <div class="more" style="text-align:center;margin:100px 0;">
+                        <button type="button">了解更多</button>
                     </div>
                 </div>
-                <div class="more" style="text-align:center;margin:50px 0;">
-                    <button type="button">了解更多</button>
+                <div class="company">
+                    <!-- 联系我们 -->
+                    <div class="contact">
+                        <div class="title">
+                            <h2>联系我们</h2>
+                            <div><span class="line">CONT</span>ACT US</div>
+                        </div>
+                        <div class="address">
+                            <div class="left">
+                                <img src="../images/qrCord.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3>江苏安孚律师事务所</h3>
+                                <div>邮编：320500</div>
+                                <div>座机：0512-6598 3049</div>
+                                <div>手机：181-1490-5186</div>
+                                <div>地址：苏州市东吴北路299号吴中大厦2307-2308室</div>
+                            </div>
+                        </div>
+                        <div class="map">
+                            <img src="../images/map.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- 案件咨询 -->
+                    <div class="consultation">
+                        <div class="title">
+                            <h2>案件咨询</h2>
+                            <div><span class="line">CASE</span> CONSULTATION</div>
+                        </div>
+                        <div class="form">
+                            <div class="form-item">
+                                <label for="name">姓名：</label>
+                                <input type="text" id="name" placeholder="填写您的姓名">
+                            </div>
+                            <div class="form-item">
+                                <label for="phone">手机：</label>
+                                <input type="text" id="phone" placeholder="填写您的手机号">
+                            </div>
+                            <div class="form-item">
+                                <label for="e-mail">邮箱：</label>
+                                <input type="text" id="e-mail" placeholder="填写您的邮箱">
+                            </div>
+                            <div class="form-item">
+                                <label for="details">详情：</label>
+                                <textarea id="details" placeholder="请描述一下你要咨询的案件详情"></textarea>
+                            </div>
+                            <div class="btn" style="text-align:center">
+                                <button type="button">提交</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="company">
-                <!-- 联系我们 -->
-                <div class="contact">
-                    <div class="title">
-                        <h2>联系我们</h2>
-                        <div><span class="line">CONT</span>ACT US</div>
+            <!-- footer -->
+            <div class="footer">
+                <div class="footer-nav">
+                    <ul>
+                        <li>首页</li>
+                        <li>关于安孚</li>
+                        <li>服务领域</li>
+                        <li>安孚团队</li>
+                        <li>安孚业绩</li>
+                        <li>人才招聘</li>
+                        <li>联系我们</li>
+                    </ul>
+                </div>
+                <div class="footer-qrCode">
+                    <div class="left">
+                        <img src="../images/qrCord.jpg" width="100px">
                     </div>
-                    <div class="address">
-                        <div class="left">
-                            <img src="../images/qrCord.jpg" alt="">
-                        </div>
-                        <div class="right">
-                            <h3>江苏安孚律师事务所</h3>
-                            <div>邮编：320500</div>
-                            <div>座机：0512-6598 3049</div>
-                            <div>手机：181-1490-5186</div>
-                            <div>地址：苏州市东吴北路299号吴中大厦2307-2308室</div>
-                        </div>
-                    </div>
-                    <div class="map">
-                        <img src="../images/map.jpg" alt="">
+                    <div class="right">
+                        <div>安 | 如 | 泰 | 山</div>
+                        <div>深 | 孚 | 众 | 望</div>
+                        <div>扫一扫关注我们</div>
                     </div>
                 </div>
-                <!-- 案件咨询 -->
-                <div class="consultation">
-                    <div class="title">
-                        <h2>案件咨询</h2>
-                        <div><span class="line">CASE</span> CONSULTATION</div>
-                    </div>
-                    <div class="form">
-                        <div class="form-item">
-                            <label for="name">姓名：</label>
-                            <input type="text" id="name" placeholder="填写您的姓名">
-                        </div>
-                        <div class="form-item">
-                            <label for="phone">手机：</label>
-                            <input type="text" id="phone" placeholder="填写您的手机号">
-                        </div>
-                        <div class="form-item">
-                            <label for="e-mail">邮箱：</label>
-                            <input type="text" id="e-mail" placeholder="填写您的邮箱">
-                        </div>
-                        <div class="form-item">
-                            <label for="details">详情：</label>
-                            <textarea id="details" placeholder="请描述一下你要咨询的案件详情"></textarea>
-                        </div>
-                        <div class="btn" style="text-align:center">
-                            <button type="button">提交</button>
-                        </div>
-                    </div>
+                <div class="copyright">
+                    Copyright © 2017 ANFU LAW OFFICES 版权所有 苏州市安孚律师事务所
+                </div>
+                <div class="copyright">
+                    苏ICP备09032311号
                 </div>
             </div>
         </div>
-        <!-- footer -->
-        <div class="footer">
-            <div class="footer-nav">
-                <ul>
-                    <li>首页</li>
-                    <li>关于安孚</li>
-                    <li>服务领域</li>
-                    <li>安孚团队</li>
-                    <li>安孚业绩</li>
-                    <li>人才招聘</li>
-                    <li>联系我们</li>
-                </ul>
-            </div>
-            <div class="footer-qrCode">
-                <div class="left">
-                    <img src="../images/qrCord.jpg" width="100px">
-                </div>
-                <div class="right">
-                    <div>安 | 如 | 泰 | 山</div>
-                    <div>深 | 孚 | 众 | 望</div>
-                    <div>扫一扫关注我们</div>
-                </div>
-            </div>
-            <div class="copyright">
-                Copyright © 2017 ANFU LAW OFFICES 版权所有 苏州市安孚律师事务所
-            </div>
-            <div class="copyright">
-                苏ICP备09032311号
-            </div>
-        </div>
-    </div>
 
-    <script src="" async defer></script>
+        <script>
+            window.onload = function () {
+                var disActive = document.getElementsByClassName('disActive');
+                var line = document.getElementsByClassName('pagination-line')
+                var num = 0;
+                for (var i = 0; i < 3; i++) {
+                    line[i].onclick = function () {
+                        for (var s = 0; s < 3; s++) {
+                            disActive[s].removeAttribute('style')
+                            line[s].removeAttribute('style')
+                        }
+                        num = this.id
+                        this.setAttribute('style', 'background-color:#fff')
+                        disActive[this.id].setAttribute('style', 'display:block')
+                    }
+                }
+                setInterval(function () {
+                    if (num < 2) {
+                        num++
+                    } else {
+                        num = 0
+                    }
+                    for (var j = 0; j < 3; j++) {
+                        disActive[j].removeAttribute('style')
+                        line[j].removeAttribute('style')
+                    }
+                    disActive[num].setAttribute('style', 'display:block')
+                    line[num].setAttribute('style', 'background-color:#fff')
+                }, 5000)
+            }
+        </script>
 </body>
 
 </html>
