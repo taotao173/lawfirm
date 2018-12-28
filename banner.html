@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="banner">
+                <ul>
+                    <li class="disActive" style="display: block"><img src="./images/banner/banner1.jpg"></li>
+                    <li class="disActive"><img src="./images/banner/banner1.jpg"></li>
+                    <li class="disActive"><img src="./images/banner/banner1.jpg"></li>
+                </ul>
+                <div class="pagination">
+                    <div id="0" class="pagination-line" style="background-color: #fff">
+                    </div>
+                    <div id="1" class="pagination-line">
+                    </div>
+                    <div id="2" class="pagination-line">
+                    </div>
+                </div>
+            </div>
+            <script>
+                    window.onload = function () {
+                        var disActive = document.getElementsByClassName('disActive');
+                        var line = document.getElementsByClassName('pagination-line')
+                        var num = 0;
+                        for (var i = 0; i < 3; i++) {
+                            line[i].onclick = function () {
+                                for (var s = 0; s < 3; s++) {
+                                    disActive[s].removeAttribute('style')
+                                    line[s].removeAttribute('style')
+                                }
+                                num = this.id
+                                this.setAttribute('style', 'background-color:#fff')
+                                disActive[this.id].setAttribute('style', 'display:block')
+                            }
+                        }
+                        setInterval(function () {
+                            if (num < 2) {
+                                num++
+                            } else {
+                                num = 0
+                            }
+                            for (var j = 0; j < 3; j++) {
+                                disActive[j].removeAttribute('style')
+                                line[j].removeAttribute('style')
+                            }
+                            disActive[num].setAttribute('style', 'display:block')
+                            line[num].setAttribute('style', 'background-color:#fff')
+                        }, 5000)
+                    }
+                </script>
+    </body>
+</html>

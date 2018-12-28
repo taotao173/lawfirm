@@ -1,0 +1,139 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    line-height: 1.5;
+}
+.size {
+    min-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1200px) {
+    .banner,
+    .footer {
+        width: 1200px;
+    }
+}
+
+/* header */
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .nav>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.header .nav>ul>li {
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.header .nav>ul>li>a {
+    color: black;
+    text-decoration: none;
+}
+
+.header .nav>ul>li>a:link,
+.header .nav>ul>li>a:visited {
+    color: black;
+}
+
+.header .nav>ul>li>a:hover,
+.header .nav>ul>li>a:active {
+    color: #92141e;
+}
+
+/* footer */
+.footer {
+    background-color: #535353;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .footer-nav {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .footer-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.footer .footer-nav li {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer .footer-qrCode {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.footer .footer-qrCode .right {
+    margin-left: 10px;
+}
+
+/* 轮播图 */
+.banner{
+    position: relative;
+    overflow: hidden;
+}
+.banner ul{
+    list-style: none;
+    padding:0px;
+    margin:0px;
+}
+.banner ul li img{
+    width:100%;
+}
+.banner .disActive{
+    display: none;
+}
+.banner .pagination{
+    position: absolute;
+    bottom: 20px;
+    width:200px;
+    left: 50%;
+    margin-left: -100px;
+    display: flex;
+}
+.banner .pagination .pagination-line{
+    width:50px;
+    height: 5px;
+    background-color: #c9c3c5;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* 左右布局 */
+.layout{
+    display: flex;
+}
+.layout .left{
+    margin-right: 20px;
+}
+.layout .right{
+    width: 100%;
+}
+.layout .right .title{
+    color:#92141e;
+    border-bottom: 2px solid black;
+}
