@@ -29,7 +29,7 @@ document.writeln("                    </ul>");
 document.writeln("                </div>");
 document.writeln("                <div class=\'footer-qrCode\'>");
 document.writeln("                    <div class=\'left\'>");
-document.writeln("                        <img src=\'./images/qrCord.jpg\' width=\'100px\'>");
+document.writeln("                        <img src=\'/images/qrCord.jpg\' width=\'100px\'>");
 document.writeln("                    </div>");
 document.writeln("                    <div class=\'right\'>");
 document.writeln("                        <div>安 | 如 | 泰 | 山</div>");

@@ -9,19 +9,19 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./css/public.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="header size">
-                <div class="logo">
+                <a href="/index.html" class="logo">
                     <img src="./images/logo.png">
-                </div>
+                </a>
                 <div class="nav">
                     <ul>
-                        <li><a href="./index.html">首页</a></li>
+                        <li><a class="active" href="./index.html">首页</a></li>
                         <li><a href="./about.html">关于安孚</a></li>
                         <li><a href="./server.html">服务领域</a></li>
                         <li><a href="./team.html">安孚团队</a></li>
@@ -31,6 +31,19 @@
                     </ul>
                 </div>
             </div>
-        <script src="" async defer></script>
+        <script>
+            var hrefArr=(window.location.href).split('/')
+            var href=hrefArr[hrefArr.length-1]
+            console.log(href)
+            li=document.getElementsByTagName('li')
+            for(var i=0;i<li.length;i++){  
+                console.log(li[i].firstChild.getAttribute('href').split('/')[li[i].firstChild.getAttribute('href').split('/').length-1])
+                if(href===li[i].firstChild.getAttribute('href').split('/')[li[i].firstChild.getAttribute('href').split('/').length-1]){
+                    li[i].firstChild.setAttribute('class','active')
+                }else{
+                    li[i].firstChild.setAttribute('class','')
+                }
+            }
+        </script>
     </body>
 </html>

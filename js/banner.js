@@ -17,9 +17,9 @@ document.writeln("            <p class=\'browsehappy\'>You are using an <strong>
 document.writeln("        <![endif]-->");
 document.writeln("        <div class=\'banner\'>");
 document.writeln("                <ul>");
-document.writeln("                    <li class=\'disActive\' style=\'display: block\'><img src=\'./images/banner/banner1.jpg\'></li>");
-document.writeln("                    <li class=\'disActive\'><img src=\'./images/banner/banner1.jpg\'></li>");
-document.writeln("                    <li class=\'disActive\'><img src=\'./images/banner/banner1.jpg\'></li>");
+document.writeln("                    <li class=\'disActive\' style=\'display: block\'><img src=\'/images/banner/banner1.jpg\'></li>");
+document.writeln("                    <li class=\'disActive\'><img src=\'/images/banner/banner2.jpg\'></li>");
+document.writeln("                    <li class=\'disActive\'><img src=\'/images/banner/banner3.jpg\'></li>");
 document.writeln("                </ul>");
 document.writeln("                <div class=\'pagination\'>");
 document.writeln("                    <div id=\'0\' class=\'pagination-line\' style=\'background-color: #fff\'>");

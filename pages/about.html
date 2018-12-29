@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/public.css">
+        <style>
+            /* server */
+.service{
+    position: relative;
+    overflow: hidden;
+}
+.service .change{
+    position: absolute;
+    right:-20px;
+    top:50%;
+}
+.service .change .right,.service .change .left{
+    width:40px;
+    height: 40px;
+    font-size: 23px;
+    background-color: #b2b2b2;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 40px;
+    color:#fff;
+    cursor:pointer;
+}
+.service .content {
+    width: 2100px;
+    overflow:hidden;
+    transition: all 1s;
+    
+}
+
+.service .content .item {
+    box-sizing: border-box;
+    width: 300px;
+   
+    text-align: center;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.service .content .item:link,.service .content .item:visited{
+    color:black;
+    text-decoration: none;
+}
+.service .content .item:hover,.service .content .item:active{
+    color:gray;
+    text-decoration: underline;
+}
+.service .content .item .img{
+    transition: all 1s;
+}
+.service .content .item .img img:hover{
+    opacity: 0.8;
+}
+
+.service .content .item>div:first-child{
+    margin-bottom: 10px;
+}
+
+.service .content .item .introduce {
+    width: 242px;
+}
+
+.service .content .item .introduce h3 {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.service .content .item .img {
+            position: relative;
+            width: 240px;
+            height: 300px;
+            border: 1px solid #cccccc;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .service .content .item .img::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            content: '+';
+            display: block;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-size: 25px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .service .content .item .introduce {
+            margin-top: 30px;
+        }
+
+        .service .content .item .introduce h3 {
+            margin-bottom: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+         <!-- 服务领域 -->
+         <div class="service size">
+                <div class="title" style="text-align:center">
+                    <h2>_____ 服务领域 _____</h2>
+                    <div>ANF<span class="line">U SER</span>VICE</div>
+                </div>
+                <div class="content" id="content">
+                    <div  class="item">
+                        <div class="img">
+                            <img src="/images/server/book.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>知识产权</h3>
+                            <div>文化创意产业及高科技领域的法律服务、知识产权纠纷、商标权侵权诉讼...</div>
+                        </div>
+                    </div>
+                    <a href="/pages/service/hourse.html" class="item">
+                        <div class="img">
+                            <img src="/images/server/hourse.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>房产建筑</h3>
+                            <div>提供交通、能源、水利、城市基础建设等建设工程项目的立项、招投标、设计...</div>
+                        </div>
+                    </a>
+                    <a href="/pages/service/adviser.html" class="item">
+                        <div class="img">
+                            <img src="/images/server/person1.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>公司顾问服务</h3>
+                            <div>为公司设立、股权变更、融资、上市等全流程提供专业的法律顾问服务 ...</div>
+                        </div>
+                    </a>
+                    <a href="/pages/service/marriage.html" class="item">
+                        <div class="img">
+                            <img src="/images/server/person2.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>婚姻继承</h3>
+                            <div>1.父母赡养问题；2.子女抚养问题；
+                                3.夫妻财产问题；4.同居财产问题...</div>
+                        </div>
+                    </a>
+                    <a href="/pages/service/criminal.html" class="item">
+                        <div class="img">
+                            <img src="/images/server/notebook.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>刑事诉讼</h3>
+                            <div>代理全国范围内刑事案件，包括但不限于商事犯罪案件、金融犯罪、毒品犯罪...</div>
+                        </div>
+                    </a>
+                    <a href="/pages/service/administration.html" class="item">
+                        <div class="img">
+                            <img src="/images/server/lantern.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>行政诉讼</h3>
+                            <div>接受各类行政法律咨询、行政复议和行政诉讼案件的咨询和委托，最大限度...</div>
+                        </div>
+                    </a>
+                    <a href="/pages/service/traffic.html" class="item">
+                        <div class="img">
+                            <img src="/images/server/car.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <h3>道路交通</h3>
+                            <div>提供关于交通事故的责任认定、司法鉴定、损害赔偿等全流程的法律服务...</div>
+                        </div>
+                    </a>
+                </div>
+                <div></div>
+                <button id="left">left</button>
+                <button id="right">right</button>
+                </div>
+        <script>
+          window.onload=function(){
+              console.log('zzj')
+              var left=document.getElementById('left')
+              var right=document.getElementById('right')
+              var content=document.getElementById('content')
+              var move=0
+              left.onclick=function(){
+                  if(move<900){
+                    move=move+300
+                  }
+                  content.setAttribute('style',`transform:translate(-${move}px,0)`)
+              }
+              right.onclick=function(){
+                  if(move>0){
+                      move=move-300
+                  }
+                  content.setAttribute('style',`transform:translate(-${move}px,0)`)
+              }
+          }
+        </script>
+    </body>
+</html>

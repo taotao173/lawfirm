@@ -14,6 +14,7 @@ html {
 
 @media screen and (max-width:1200px) {
     .banner,
+    .header,
     .footer {
         width: 1200px;
     }
@@ -42,9 +43,19 @@ html {
 .header .nav>ul>li>a {
     color: black;
     text-decoration: none;
+    display: inline-block;
+    width:80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.header .nav>ul>li .active{
+    background-color: #004995;
+    color:#fff;
+    border-radius: 4px;
 }
 
-.header .nav>ul>li>a:link,
+/* .header .nav>ul>li>a:link,
 .header .nav>ul>li>a:visited {
     color: black;
 }
@@ -52,14 +63,15 @@ html {
 .header .nav>ul>li>a:hover,
 .header .nav>ul>li>a:active {
     color: #92141e;
-}
+} */
 
 /* footer */
 .footer {
     background-color: #535353;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 20px 0px;
 }
 
 .footer .footer-nav {
@@ -123,6 +135,50 @@ html {
     cursor: pointer;
 }
 
+/* server */
+.service{
+    position: relative;
+}
+
+.service .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service .content .item {
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.service .content .item:link,.service .content .item:visited{
+    color:black;
+    text-decoration: none;
+}
+.service .content .item:hover,.service .content .item:active{
+    color:gray;
+    text-decoration: underline;
+}
+.service .content .item .img{
+    transition: all 1s;
+}
+.service .content .item .img img:hover{
+    opacity: 0.8;
+}
+
+.service .content .item>div:first-child{
+    margin-bottom: 10px;
+}
+
+.service .content .item .introduce {
+    width: 242px;
+}
+
+.service .content .item .introduce h3 {
+    text-align: center;
+    line-height: 1.5;
+}
+
 /* 左右布局 */
 .layout{
     display: flex;
@@ -136,4 +192,63 @@ html {
 .layout .right .title{
     color:#92141e;
     border-bottom: 2px solid black;
+}
+
+/* 位置 */
+.position{
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+}
+.position a:link,.position a:visited{
+    text-decoration: none;
+    color:#808080;
+}
+.position a:hover,.position a:active{
+    text-decoration: underline;
+    color:#92141e;
+}
+
+/* 案例 */
+.case p{
+    text-indent: 2em;
+}
+
+/* 个人简介 */
+.person{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.person .left{
+    background-color: #e5ecf4;
+    width: 450px;
+    height: 150px;
+    position: relative;
+    margin-top: 280px;
+    margin-right: 50px;
+}
+.person .left .directory{
+    width:300px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -80px;
+    top:-40px;
+    font-weight: bold;
+}
+.person .left .directory .line{
+    display: inline-block;
+    width:200px;
+    margin-left: 10px;
+    margin-bottom:4px;
+    border-top: 1px solid black;
+    border-bottom:1px solid black;
+}
+.person .left .avatar{
+    width:300px;
+    height: 350px;
+    background-color:#004995;
+    position:absolute;
+    bottom: 40px;
+    right: 30px;
 }
