@@ -252,3 +252,24 @@ html {
     bottom: 40px;
     right: 30px;
 }
+
+/* form */
+.form{
+    font-size: 16px;
+    text-align: center;
+}
+.form .form-item{
+    margin:20px 0;
+}
+.form .form-item input{
+    width:500px;
+    height: 40px;
+}
+.form .form-item textarea{
+    width:500px;
+    height: 180px;
+}
+.form .form-item:last-child{
+    display: flex;
+    align-items:flex-start;
+}

@@ -2,214 +2,140 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/public.css">
-        <style>
-            /* server */
-.service{
-    position: relative;
-    overflow: hidden;
-}
-.service .change{
-    position: absolute;
-    right:-20px;
-    top:50%;
-}
-.service .change .right,.service .change .left{
-    width:40px;
-    height: 40px;
-    font-size: 23px;
-    background-color: #b2b2b2;
-    margin-bottom: 10px;
-    text-align: center;
-    line-height: 40px;
-    color:#fff;
-    cursor:pointer;
-}
-.service .content {
-    width: 2100px;
-    overflow:hidden;
-    transition: all 1s;
-    
-}
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-.service .content .item {
-    box-sizing: border-box;
-    width: 300px;
-   
-    text-align: center;
-    margin-top: 20px;
-    cursor:pointer;
-}
-.service .content .item:link,.service .content .item:visited{
-    color:black;
-    text-decoration: none;
-}
-.service .content .item:hover,.service .content .item:active{
-    color:gray;
-    text-decoration: underline;
-}
-.service .content .item .img{
-    transition: all 1s;
-}
-.service .content .item .img img:hover{
-    opacity: 0.8;
-}
-
-.service .content .item>div:first-child{
-    margin-bottom: 10px;
-}
-
-.service .content .item .introduce {
-    width: 242px;
-}
-
-.service .content .item .introduce h3 {
-    text-align: center;
-    line-height: 1.5;
-}
-
-.service .content .item .img {
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/public.css">
+    <style>
+        .team .content {
+            display: flex;
             position: relative;
-            width: 240px;
-            height: 300px;
-            border: 1px solid #cccccc;
+            flex-wrap: wrap;
+        }
+
+        .team .content .person-introduce {
+            position: relative;
+            width:300px;
             text-align: center;
-            padding-top: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 1s;
         }
 
-        .service .content .item .img::after {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -25px;
-            margin-top: -25px;
-            content: '+';
-            display: block;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            color: #fff;
-            font-size: 25px;
-            background-color: rgba(0, 0, 0, 0.2);
+        .team .content .person-introduce:link,.team .content .person-introduce:visited{
+            color:black;
+            text-decoration: none;
+        }
+        .team .content .person-introduce:hover,.team .content .person-introduce:active{
+            color:gray;
+            text-decoration: none;
         }
 
-        .service .content .item .introduce {
-            margin-top: 30px;
+        .team .content .outside {
+            border: 2px solid #004995;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
         }
 
-        .service .content .item .introduce h3 {
-            margin-bottom: 5px;
+        .team .content .inside {
+            width: 180px;
+            height: 180px;
+            background-color: #004995;
+            border-radius: 50%;
+            margin: 10px 10px;
         }
-        </style>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+        .team .content .inside img {
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .team .content .inside img:hover{
+            opacity: 0.6;
+        }
+
+        .team .content .person-info div:nth-child(1) {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .team .content .person-info div:nth-child(2) {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .team .content .person-info div:nth-child(3) {
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px solid #004995;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-         <!-- 服务领域 -->
-         <div class="service size">
+    <div>
+        <!-- header -->
+        <script src="/js/header.js"></script>
+        <!-- banner -->
+        <img class="banner" src="/images/banner/banner3.jpg" width="100%" alt="">
+        <div class="size">
+            <!-- position -->
+            <div class="position">
+                <a href="/index.html">首页</a> > <a href="#">关于安孚</a>
+            </div>
+            <!-- 关于安孚 -->
+            <div class="about">
                 <div class="title" style="text-align:center">
-                    <h2>_____ 服务领域 _____</h2>
-                    <div>ANF<span class="line">U SER</span>VICE</div>
+                    <h2>_____ 律师概况 _____</h2>
+                    <div>ABOUT ANFU</div>
                 </div>
-                <div class="content" id="content">
-                    <div  class="item">
-                        <div class="img">
-                            <img src="/images/server/book.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>知识产权</h3>
-                            <div>文化创意产业及高科技领域的法律服务、知识产权纠纷、商标权侵权诉讼...</div>
-                        </div>
-                    </div>
-                    <a href="/pages/service/hourse.html" class="item">
-                        <div class="img">
-                            <img src="/images/server/hourse.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>房产建筑</h3>
-                            <div>提供交通、能源、水利、城市基础建设等建设工程项目的立项、招投标、设计...</div>
-                        </div>
-                    </a>
-                    <a href="/pages/service/adviser.html" class="item">
-                        <div class="img">
-                            <img src="/images/server/person1.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>公司顾问服务</h3>
-                            <div>为公司设立、股权变更、融资、上市等全流程提供专业的法律顾问服务 ...</div>
-                        </div>
-                    </a>
-                    <a href="/pages/service/marriage.html" class="item">
-                        <div class="img">
-                            <img src="/images/server/person2.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>婚姻继承</h3>
-                            <div>1.父母赡养问题；2.子女抚养问题；
-                                3.夫妻财产问题；4.同居财产问题...</div>
-                        </div>
-                    </a>
-                    <a href="/pages/service/criminal.html" class="item">
-                        <div class="img">
-                            <img src="/images/server/notebook.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>刑事诉讼</h3>
-                            <div>代理全国范围内刑事案件，包括但不限于商事犯罪案件、金融犯罪、毒品犯罪...</div>
-                        </div>
-                    </a>
-                    <a href="/pages/service/administration.html" class="item">
-                        <div class="img">
-                            <img src="/images/server/lantern.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>行政诉讼</h3>
-                            <div>接受各类行政法律咨询、行政复议和行政诉讼案件的咨询和委托，最大限度...</div>
-                        </div>
-                    </a>
-                    <a href="/pages/service/traffic.html" class="item">
-                        <div class="img">
-                            <img src="/images/server/car.jpg" alt="">
-                        </div>
-                        <div class="introduce">
-                            <h3>道路交通</h3>
-                            <div>提供关于交通事故的责任认定、司法鉴定、损害赔偿等全流程的法律服务...</div>
-                        </div>
-                    </a>
+                <div class="case">
+                    <p>安孚律师事务所在民商事诉讼、投融资、知识产权、建筑房地产、劳动专项、外商投资、并购重组等法律业务领域都拥有出色的业绩， 凭借多年积累的执业信誉与经验，已经获得众多客户之信任。</p>
+                    <p>安孚律师事务所也与苏州、北京地区专业从事法律、经济、审计、技术、房地产等领域的专家有良好的合作关系，他们对律师业务的指导，是我们法律服务质量不断提高的有力保证。</p>
+                    <p>安孚律师事务所将会在您所涉及的每一个领域，根据您的需要，理性地为您提供诚信、卓越的法律服务。</p>
                 </div>
-                <div></div>
-                <button id="left">left</button>
-                <button id="right">right</button>
+                <div class="title" style="text-align:center">
+                        <h2>_____ 服务理念 _____</h2>
+                        <div>ANFU SERVICE</div>
                 </div>
-        <script>
-          window.onload=function(){
-              console.log('zzj')
-              var left=document.getElementById('left')
-              var right=document.getElementById('right')
-              var content=document.getElementById('content')
-              var move=0
-              left.onclick=function(){
-                  if(move<900){
-                    move=move+300
-                  }
-                  content.setAttribute('style',`transform:translate(-${move}px,0)`)
-              }
-              right.onclick=function(){
-                  if(move>0){
-                      move=move-300
-                  }
-                  content.setAttribute('style',`transform:translate(-${move}px,0)`)
-              }
-          }
-        </script>
-    </body>
+                <div class="case">
+                    <p>安孚律师事务所以客户的利益为中心，通过与客户的共同努力以解决纠纷、降低风险、控制合理的成本支出，成为客户值得信赖的伙伴。</p>
+                    <p>安孚律师事务所将努力满足客户的实际需求，包括客户的业务特点，遵循客户的价值判断，评估客户的商业目标，以达到双赢或多赢的合作。</p>
+                    <p>安孚律师事务所通常会与下列类型的客户建立常年法律顾问关系或者专项诉讼业务委托关系：</p>
+                    <p>处于发展上升期的客户；</p>
+                    <p>对法律水准要求较高的客户；</p>
+                    <p>适宜建立长期合作关系的其他客户。</p>
+                </div>
+                <div class="title" style="text-align:center">
+                        <h2>_____ 服务目标 _____</h2>
+                        <div>SERVICE OBJECTIVE</div>
+                </div>
+                <div class="case">
+                    <p>身处不同的发展阶段，面对不同的经营情势，安孚律师事务所将会自始至终秉持自己的下列服务目标：</p>
+                    <p>凭借专业、诚信、快速、有效、合法并具实效的法律服务，获得客户的肯定与信赖；</p>
+                    <p>不断拓展业务领域，培养专业人才，提升自身的竞争实力；</p>
+                    <p>勇于面对挑战，承担社会责任。</p>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <script src="/js/footer.js"></script>
+    </div>
+</body>
+
 </html>
