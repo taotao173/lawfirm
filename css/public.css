@@ -89,7 +89,14 @@ html {
     text-align: center;
     font-size: 18px;
 }
-
+.footer .footer-nav li a:link,.footer .footer-nav li a:visited{
+    color:#fff;
+    text-decoration: none;
+}
+.footer .footer-nav li a:hover,.footer .footer-nav li a:active{
+    color:#92141e;
+    text-decoration: underline;
+}
 .footer .footer-qrCode {
     display: flex;
     width: 1200px;
