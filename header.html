@@ -2,48 +2,52 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/public.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="header size">
-                <a href="/index.html" class="logo">
-                    <img src="./images/logo.png">
-                </a>
-                <div class="nav">
-                    <ul>
-                        <li><a class="active" href="./index.html">首页</a></li>
-                        <li><a href="./about.html">关于安孚</a></li>
-                        <li><a href="./server.html">服务领域</a></li>
-                        <li><a href="./team.html">安孚团队</a></li>
-                        <li><a href='./achievement.html'>安孚业绩</a></li>
-                        <li><a href='./recruit.html'>人才招聘</a></li>
-                        <li><a href='./contact.html'>联系我们</a></li>
-                    </ul>
-                </div>
-            </div>
-        <script>
-            var hrefArr=(window.location.href).split('/')
-            var href=hrefArr[hrefArr.length-1]
-            console.log(href)
-            li=document.getElementsByTagName('li')
-            for(var i=0;i<li.length;i++){  
-                console.log(li[i].firstChild.getAttribute('href').split('/')[li[i].firstChild.getAttribute('href').split('/').length-1])
-                if(href===li[i].firstChild.getAttribute('href').split('/')[li[i].firstChild.getAttribute('href').split('/').length-1]){
-                    li[i].firstChild.setAttribute('class','active')
-                }else{
-                    li[i].firstChild.setAttribute('class','')
-                }
+    <div class="header size">
+        <a href="/index.html" class="logo">
+            <img src="./images/logo.png">
+        </a>
+        <div class="nav">
+            <ul>
+                <li><a class="active" href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于安孚</a></li>
+                <li><a href="./server.html">服务领域</a></li>
+                <li><a href="./team.html">安孚团队</a></li>
+                <li><a href='./achievement.html'>安孚业绩</a></li>
+                <li><a href='./recruit.html'>人才招聘</a></li>
+                <li><a href='./contact.html'>联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var href = window.location.href
+        li = document.getElementsByTagName('li')
+        for (var i = 0; i < li.length; i++) {
+            var reg =`/${li[i].firstChild.getAttribute('href').split('/')[li[i].firstChild.getAttribute('href').split('/').length-1].split('.')[0]}/`
+            var obj = eval("(" + reg + ")")
+            if (obj.test(href)) {
+                li[i].firstChild.setAttribute('class', 'active')
+            } else {
+                li[i].firstChild.setAttribute('class', '')
             }
-        </script>
-    </body>
+        }
+    </script>
+</body>
+
 </html>

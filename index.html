@@ -14,6 +14,12 @@
     <meta name="keywords" content="江苏律师,江苏律师事务所,律师咨询,在线律师咨询,江苏律师顾问,法律顾问律师,法律顾问,苏州律师事务所,江苏律师在线咨询,江苏安孚律师事务所,安孚律师">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/public.css">
+    <script>
+        console.log(window.location.pathname)
+        if(window.location.pathname==='/'){
+            window.location.href="/index.html"; 
+        }
+    </script>
     <style>
         h1,h2,h3,h4,h5 {
             margin: 5px 0;
@@ -87,7 +93,7 @@
             padding:150px 20px 20px 20px;
             box-sizing: border-box;
             z-index:-1;
-            background:url('./images/detail-bg.jpg')center no-repeat;
+            background:url('/images/detail-bg.jpg')center no-repeat;
             text-align: left;
         }
         .team .content .person-introduce .details{
@@ -300,7 +306,7 @@
                             安孚律师事务所将会在您所涉及的每一个领域，根据您的需要，理性地为您提供诚信、卓越的法律服务。
                         </p>
                         <div class="more" style="margin-top:50px">
-                           <a href="#"><button type="button">了解更多</button></a>
+                           <a href="/pages/about.html"><button type="button">了解更多</button></a>
                         </div>
                     </div>
                 </div>
@@ -315,11 +321,11 @@
                             ></div>
                 </div>
                 <div class="title" style="text-align:center">
-                    <h2>_____ 服务领域 _____</h2>
+                    <h2>服务领域</h2>
                     <div>ANF<span class="line">U SER</span>VICE</div>
                 </div>
                 <div class="content" id="content">
-                    <a href="/pages/service/knowledge.html" class="item">
+                    <a href="/pages/server/knowledge.html" class="item">
                         <div class="img">
                             <img src="/images/server/book.jpg" alt="">
                         </div>
@@ -328,7 +334,7 @@
                             <div>文化创意产业及高科技领域的法律服务、知识产权纠纷、商标权侵权诉讼...</div>
                         </div>
                     </a>
-                    <a href="/pages/service/hourse.html" class="item">
+                    <a href="/pages/server/hourse.html" class="item">
                         <div class="introduce">
                             <h3>房产建筑</h3>
                             <div>提供交通、能源、水利、城市基础建设等建设工程项目的立项、招投标...</div>
@@ -337,7 +343,7 @@
                             <img src="/images/server/hourse.jpg" alt="">
                         </div>
                     </a>
-                    <a href="/pages/service/adviser.html" class="item">
+                    <a href="/pages/server/adviser.html" class="item">
                         <div class="img">
                             <img src="/images/server/person1.jpg" alt="">
                         </div>
@@ -346,7 +352,7 @@
                                         <div>为公司设立、股权变更、融资、上市等全流程提供专业的法律顾问服务 ...</div>
                                     </div>
                     </a>
-                    <a href="/pages/service/marriage.html" class="item">
+                    <a href="/pages/server/marriage.html" class="item">
                         <div class="introduce">
                             <h3>婚姻继承</h3>
                             <div>1.父母赡养问题；2.子女抚养问题；
@@ -356,7 +362,7 @@
                             <img src="/images/server/person2.jpg" alt="">
                         </div>
                     </a>
-                    <a href="/pages/service/criminal.html" class="item">
+                    <a href="/pages/server/criminal.html" class="item">
                         <div class="img">
                             <img src="/images/server/notebook.jpg" alt="">
                         </div>
@@ -365,7 +371,7 @@
                                         <div>代理全国范围内刑事案件，包括但不限于商事犯罪案件、金融犯罪、毒品犯罪...</div>
                                     </div>
                     </a>
-                    <a href="/pages/service/administration.html" class="item">
+                    <a href="/pages/server/administration.html" class="item">
                         <div class="introduce">
                             <h3>行政诉讼</h3>
                             <div>接受各类行政法律咨询、行政复议和行政诉讼案件的咨询和委托，最大限度...</div>
@@ -374,7 +380,7 @@
                             <img src="/images/server/lantern.jpg" alt="">
                         </div>
                     </a>
-                    <a href="/pages/service/traffic.html" class="item">
+                    <a href="/pages/server/traffic.html" class="item">
                         <div class="img">
                             <img src="/images/server/car.jpg" alt="">
                         </div>
@@ -416,7 +422,7 @@
                     <div class="person-introduce">
                         <div class="outside">
                             <div class="inside">
-                                <img src="./images/team/avatar(2).jpg" width="180px" height="180px" alt="">
+                                <img src="/images/team/avatar(2).jpg" width="180px" height="180px" alt="">
                             </div>
                         </div>
                         <div class="person-info">
@@ -433,7 +439,7 @@
                     <div class="person-introduce">
                         <div class="outside">
                             <div class="inside">
-                                <img src="./images/team/avatar(3).jpg" width="180px" height="180px" alt="">
+                                <img src="/images/team/avatar(3).jpg" width="180px" height="180px" alt="">
                             </div>
                         </div>
                         <div class="person-info">
@@ -478,7 +484,7 @@
                     </div>
                     <div class="address">
                         <div class="left">
-                            <img src="./images/qrCord.jpg" alt="">
+                            <img src="/images/qrCord.jpg" alt="">
                         </div>
                         <div class="right">
                             <h3>江苏安孚律师事务所</h3>
@@ -489,7 +495,7 @@
                         </div>
                     </div>
                     <div class="map">
-                        <img src="./images/map.jpg" alt="">
+                        <img src="/images/map.jpg" alt="">
                     </div>
                 </div>
                 <!-- 案件咨询 -->
@@ -536,13 +542,13 @@
             if (move < 900) {
                 move = move + 300
             }
-            content.setAttribute('style', `transform:translate(-${move}px,0)`)
+            content.setAttribute('style', `transform:translate(-${move}px,0);-ms-transform:translate(-${move}px,0);-moz-transform:translate(-${move}px,0);-webkit-transform:translate(-${move}px,0);-o-transform:translate(-${move}px,0)`)
         }
         right.onclick = function () {
             if (move > 0) {
                 move = move - 300
             }
-            content.setAttribute('style', `transform:translate(-${move}px,0)`)
+            content.setAttribute('style', `transform:translate(-${move}px,0);-ms-transform:translate(-${move}px,0);-moz-transform:translate(-${move}px,0);-webkit-transform:translate(-${move}px,0);-o-transform:translate(-${move}px,0)`)
         }
 </script>
 

@@ -38,7 +38,7 @@ document.writeln("                        <div>扫一扫关注我们</div>");
 document.writeln("                    </div>");
 document.writeln("                </div>");
 document.writeln("                <div class=\'copyright\'>");
-document.writeln("                    Copyright © 2017 ANFU LAW OFFICES 版权所有 苏州市安孚律师事务所");
+document.writeln("                    Copyright © 2017 ANFU LAW OFFICES 版权归 <a href=\'/index.html\'>苏州市安孚律师事务所</a> 所有");
 document.writeln("                </div>");
 document.writeln("                <div class=\'copyright\'>");
 document.writeln("                    苏ICP备09032311号");

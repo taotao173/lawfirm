@@ -19,6 +19,13 @@ html {
         width: 1200px;
     }
 }
+/* title */
+.title h2{
+    margin-bottom: 5px;
+}
+.title div{
+    color:gray;
+}
 
 /* header */
 .header {
@@ -34,20 +41,20 @@ html {
 }
 
 .header .nav>ul>li {
-    width: 100px;
+    width: 130px;
     font-size: 16px;
     font-weight: 600;
-    text-align: right;
+    text-align: center;
 }
 
 .header .nav>ul>li>a {
     color: black;
     text-decoration: none;
     display: inline-block;
-    width:80px;
-    height: 40px;
+    width:100px;
+    height: 35px;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
 }
 .header .nav>ul>li .active{
     background-color: #004995;
@@ -89,12 +96,12 @@ html {
     text-align: center;
     font-size: 18px;
 }
-.footer .footer-nav li a:link,.footer .footer-nav li a:visited{
+.footer a:link,.footer a:visited{
     color:#fff;
     text-decoration: none;
 }
-.footer .footer-nav li a:hover,.footer .footer-nav li a:active{
-    color:#92141e;
+.footer a:hover,.footer a:active{
+    color:#004995;
     text-decoration: underline;
 }
 .footer .footer-qrCode {
@@ -197,7 +204,7 @@ html {
     width: 100%;
 }
 .layout .right .title{
-    color:#92141e;
+    color:#004995;
     border-bottom: 2px solid black;
 }
 
@@ -213,7 +220,7 @@ html {
 }
 .position a:hover,.position a:active{
     text-decoration: underline;
-    color:#92141e;
+    color:#004995;
 }
 
 /* 案例 */
@@ -276,7 +283,8 @@ html {
     width:500px;
     height: 180px;
 }
-.form .form-item:last-child{
+.form .form-item:nth-child(4){
     display: flex;
     align-items:flex-start;
+    justify-content: center;
 }
